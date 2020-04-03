@@ -1,0 +1,103 @@
+
+/*The main body settings*/
+body {
+    background-color:#ffffff;
+    background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    color:#555555;
+    font-size: 200%;
+    font-family: helvetica;
+}
+
+/*This section controls the Header at the top of the website*/
+#header {
+    position:fixed;
+    top:0;
+    width:100%;
+    background-color:#555555;
+    Padding-top: 10px;
+    Padding-bottom: 10px;
+}
+
+#whiteBackground {
+    width:80%;
+    background-color: whitesmoke;
+
+}
+/* This section keeps everything centered.*/
+#main {
+    text-align:center;
+}
+
+/*This section controls the main title (the "hi")of the site.*/
+h1 {
+    font-size: 1000%;
+    margin-bottom:12px;
+}
+
+.name{
+    font-size:250%;
+}
+
+.briefIntro {
+    width:60%;
+    margin-left:20%;
+    font-size:125%;
+    font-family: Georgia;
+    align-content: justify;
+    font-weight: lighter;
+}
+
+/*This section control the big main image of the guys chilling in the office*/
+#bigImage {
+    margin-top:50px;
+    Width:96%;
+    margin-bottom:0px;
+}
+
+/*This section controls the text that is under the main image.*/
+#imageSubtext {
+    Margin-top:5px;
+    font-size:50%;
+    font-family:helvetica;
+    text-align: center;
+    font-style: italic;
+}
+
+/*This section controls the header paragraphs (the "About me" and "Projects" headers)*/ 
+.sectionHeader {
+    font-size:125%;
+    font-weight:lighter;
+}
+
+/*This section controls tha main body text*/
+p {
+    width:60%;
+    text-align: justify;
+    margin-left:20%;
+    font-family:georgia;
+    font-size:80%;
+}
+
+
+/*This section would control buttons if there were any on my site...*/
+.formLink {
+    width:30%;
+    margin-bottom: 25px;
+    background-color: darkblue;
+    padding-top:10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    font-family:georgia;
+    font-weight:bold;
+    border:none;
+    box-shadow:2px 2px 5px rgba(0,0,0,0.3);
+    transition: 0.3s;
+    color:white;
+}
+
+
+
+/* Unsplash for images - unsplash.com. All images need to be put in the folder */
+/*https://drive.google.com/uc?export=view&id=<INSERT IMAGE ID>*/ 
+/* when you go to share the image on your google drive you select tht text between d/ and /view */
