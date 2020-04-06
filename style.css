@@ -1,4 +1,5 @@
 
+/*Please note this site is not optimized for mobile viewing.*/
 /*The main body settings*/
 body {
     background-color:#ffffff;
@@ -7,52 +8,186 @@ body {
     color:#555555;
     font-size: 200%;
     font-family: helvetica;
+    min-width:500px;
 }
 
-/*This section controls the Header at the top of the website*/
-#header {
+/*This section controls the Header at the top of the website.the header is fixed to the top of the website and has a width that spans the whole page and is a medium gray background color.*/
+.header {
     position:fixed;
     top:0;
     width:100%;
     background-color:#555555;
-    Padding-top: 10px;
-    Padding-bottom: 10px;
+    height:70px;
+    font-family: georgia;
+    display:flex;
+    align-items: center;
+    animation: dropdownheader 1.5s 1;
 }
 
-#whiteBackground {
+
+/*Drop down animation for the header*/
+@keyframes dropdownheader {
+    0% {transform:translate(0px,-100px);
+    }
+    100% {transform:translate(0px,0px);
+    }
+}
+/*Header transition in from the left.*/
+#headerLeft {
+    Display:flex;
+    Justify-content:flex-start; 
+    width:20%;  
+    align-items:center;
+    animation: leftheader 2s 1;
+}
+/*Header transition in from the left.*/
+@keyframes leftheader {
+    0% {transform:translate(-50%,0px);
+    }
+    50% {transform:translate(-50%,0px);
+    }
+    100% {transform:translate(0px,0px);
+    }
+}
+/*This section controls the left hand link in the header.*/
+.headerLinkL {
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-left:8%;
+    width:50px;
+    border-top:10px;
+    border-bottom:10px;
+    border-left:10px;
+    border-right:10px;
+    border-style: solid;
+    border-width:4px;
+    border-color: #ffffff;
+    text-align: center;
+}
+.headerLinkL:link {
+    text-decoration:none;
+    color:#ffffff;
+    align-items: center;
+}
+.headerLinkL:hover {
+    background-color:rgb(29, 64, 87);
+    transition-delay: 0.3s;
+    transition: 0.5s;
+    font-size:103%;
+}
+.headerLinkL:visited {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/*This controls the links on the right.*/
+#headerRight {
+    display: flex;
+    align-items:center;
+    justify-content:flex-end;
     width:80%;
-    background-color: whitesmoke;
-
+    animation: rightheader 2s 1;
 }
+/*Header transition in from the right.*/
+@keyframes rightheader {
+    0% {transform:translate(50%,0px);
+    }
+    50% {transform:translate(50%,0px);
+    }
+    100% {transform:translate(0px,0px);
+    }
+}
+/*This section controls the right header links.*/
+.headerLinkR {
+    padding-left: 10px;
+    padding-right: 10px;
+    width:145px;
+    text-align: center;
+    margin-right: 1.5%;
+    padding-top: 15px;
+    transition:0.3s;
+}
+.headerLinkR:link {
+    text-decoration: none;
+    color: #ffffff;
+    height: 55px;
+}
+.headerLinkR:hover {
+    background-color:rgb(29, 64, 87);
+    transition-delay: 0.3s;
+    transition: 0.3s;
+    font-size: 103%;
+    border-radius:0px;
+}
+.headerLinkR:visited {
+    color:#ffffff;
+}
+
+
 /* This section keeps everything centered.*/
 #main {
     text-align:center;
+    animation: fadingin 3s 1;
+}
+a:link{
+    color:rgb(29, 64, 87);
+    transition: 0.3s;
+    border-radius: 5px;
+}
+a:hover{
+    background-color: #999999;
+    transition-delay: 0.3s;
+    transition: 0.3s;
+}
+a:visited{
+    color:rgb(29, 64, 87);
 }
 
-/*This section controls the main title (the "hi")of the site.*/
+/*This section controls the main title (the "hi") of the site.*/
 h1 {
     font-size: 1000%;
-    margin-bottom:12px;
+    margin-bottom:0px;
+    margin-top:150px;
+    animation: slideup 2s 1;
+}
+@keyframes slideup {
+    0% {transform:translate(0px,0px);
+        opacity: 0;}
+    50% {transform:translate(0px,100px);
+        opacity: 0;}
+    100% {transform:translate(0px,0px);
+        opacity:1;}
 }
 
-.name{
+/*This section controls the name.*/
+#name{
     font-size:250%;
+    margin-top:10px;
+    margin-bottom: 100px;
 }
 
-.briefIntro {
-    width:60%;
-    margin-left:20%;
+/*This section controls the intro.*/
+#briefIntro {
     font-size:125%;
     font-family: Georgia;
-    align-content: justify;
     font-weight: lighter;
+    margin-bottom: 100px;
+    width:60%;
+    margin-left: 20%;
+
 }
 
-/*This section control the big main image of the guys chilling in the office*/
+/*This section control the big main image of the guys chilling in the office.*/
 #bigImage {
-    margin-top:50px;
+    margin-top:30px;
     Width:96%;
     margin-bottom:0px;
+    animation: fadingin 3s 1;
+}
+
+@keyframes fadingin {
+    0% {opacity: 0;}
+    100% {opacity:1;}
 }
 
 /*This section controls the text that is under the main image.*/
@@ -62,42 +197,91 @@ h1 {
     font-family:helvetica;
     text-align: center;
     font-style: italic;
+    margin-bottom: 50px;
 }
 
 /*This section controls the header paragraphs (the "About me" and "Projects" headers)*/ 
 .sectionHeader {
     font-size:125%;
     font-weight:lighter;
+    color:rgb(52, 73, 87);
 }
 
+.sectionSubheader {
+    Font-size: 95%;
+    color:rgb(29, 64, 87);
+}
 /*This section controls tha main body text*/
 p {
     width:60%;
-    text-align: justify;
     margin-left:20%;
     font-family:georgia;
     font-size:80%;
+    text-align:left;
+}
+#twoColumn {
+    display: flex;
+    width:60%;
+    margin-left:20%;
+}
+.halves {
+    width:50%;
+    text-align:left;
+}
+
+#leftHalfSub {
+    width:100%;
+    margin-bottom:0px;
+    text-align: left;
+    margin-left:0px;
+    text-align:left;
+}
+
+#rightHalfSub {
+    width:100%;
+    margin-bottom:0px;
+    margin-left:0px;
+}
+
+h4{
+    font-size:80%;
+    font-weight: lighter;
+    margin-top:0px;
+    font-family: georgia;
+}
+#rightHalfList {
+    margin-left:3%;
+}
+
+#leftHalfList {
+    margin-right:3%;
+}
+#closer {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+}
+#imageJB {
+    width:20%;
+    Border-radius:50%;
+    margin-top:10px;
+}
+
+#footer {
+    font-size:90%;
+    width:100%;
+    background-color:#999999;
+    color:#ffffff;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+h5 {
+    font-family: georgia;
+    font-weight: lighter;
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-left:20%;
+    width:60%;
 }
 
 
-/*This section would control buttons if there were any on my site...*/
-.formLink {
-    width:30%;
-    margin-bottom: 25px;
-    background-color: darkblue;
-    padding-top:10px;
-    padding-bottom: 10px;
-    border-radius: 20px;
-    font-family:georgia;
-    font-weight:bold;
-    border:none;
-    box-shadow:2px 2px 5px rgba(0,0,0,0.3);
-    transition: 0.3s;
-    color:white;
-}
-
-
-
-/* Unsplash for images - unsplash.com. All images need to be put in the folder */
-/*https://drive.google.com/uc?export=view&id=<INSERT IMAGE ID>*/ 
-/* when you go to share the image on your google drive you select tht text between d/ and /view */
